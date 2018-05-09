@@ -2,12 +2,13 @@ const admin = require('./firebase-admin');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const env = require('process.env');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = 8080;
-const host = 'cyber-api.herokuapp.com';
+const port = env.APP_PORT;
+const host = env.APP_HOST;
 
 const router = require('./routes');
 app.use('/', router);
