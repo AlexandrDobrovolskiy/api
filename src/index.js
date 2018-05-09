@@ -2,13 +2,12 @@ const admin = require('./firebase-admin');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const env = require('process.env');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = env.APP_PORT;
-const host = env.APP_HOST;
+const port = process.env.APP_PORT;
+const host = process.env.APP_HOST;
 
 const router = require('./routes');
 app.use('/', router);
