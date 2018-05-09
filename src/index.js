@@ -7,7 +7,7 @@ require('dotenv').config();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = process.env.APP_PORT;
+const port = process.env.APP_PORT || '5000';
 const host = process.env.APP_HOST || 'localhost';
 
 const router = require('./routes');
