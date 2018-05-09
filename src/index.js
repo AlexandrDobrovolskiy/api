@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const port = process.env.APP_PORT || 8080;
-const host = process.env.APP_HOST || 'cyber-api.herokuapp';
+const host = process.env.APP_HOST || 'localhost';
 
 const router = require('./routes');
 app.use('/', router);
