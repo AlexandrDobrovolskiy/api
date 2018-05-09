@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = 8080;
+const port = '';
 const host = 'cyber-api.herokuapp.com';
 
 const router = require('./routes');
