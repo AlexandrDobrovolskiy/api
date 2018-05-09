@@ -6,12 +6,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = process.env.APP_PORT || 8080;
 const host = process.env.APP_HOST || 'cyber-api.herokuapp';
 
 const router = require('./routes');
 app.use('/', router);
-app.listen(port, host);
+app.listen(host);
 
 const db = admin.database();
 
