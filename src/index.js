@@ -2,6 +2,7 @@ const admin = require('./firebase-admin');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const process = require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
